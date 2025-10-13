@@ -1,0 +1,170 @@
+# ===========================================
+# Flutter / Dart 基本
+# ===========================================
+/build/
+/.dart_tool/
+/.packages
+.pub-cache/
+/flutter_*.png
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies.json
+.flutter-versions
+.melos_tool/
+/pubspec.lock            # アプリの場合は除外。ライブラリならコミット推奨。
+.flutter-plugins
+.dart_tool/
+
+# ===========================================
+# IDE 設定ファイル
+# ===========================================
+.idea/
+.vscode/
+*.iml
+
+# ===========================================
+# OS / 一時ファイル
+# ===========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.log
+
+# ===========================================
+# Android 関連
+# ===========================================
+/android/.gradle/
+/android/local.properties
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+/android/key.properties   # ← keystore 情報は絶対に含めない
+*.keystore
+*.jks
+
+# ===========================================
+# iOS 関連
+# ===========================================
+# CocoaPods
+/ios/Pods/
+/ios/.symlinks/
+/ios/Flutter/Flutter.framework
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/ephemeral/
+/ios/.generated/
+/ios/Runner/GeneratedPluginRegistrant.*
+
+# Xcode build 生成物
+/ios/DerivedData/
+/ios/build/# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+/android/local.properties
+/android/key.properties   # ← keystore情報を含む場合は絶対にGitに含めない
+xcshareddata/
+
+# Swift Package Manager
+/.swiftpm/
+/Package.resolved
+
+# ===========================================
+# macOS / Linux / Windows デスクトップ
+# ===========================================
+/macos/Flutter/ephemeral/
+/linux/flutter/ephemeral/
+/windows/flutter/ephemeral/
+
+# ===========================================
+# Web 関連
+# ===========================================
+/web/.dart_tool/
+/web/.firebase/
+/build/web/
+
+# ===========================================
+# 環境ファイル / 秘密情報
+# ===========================================
+.env
+.env.*
+*.pem
+*.p12
+*.cer
+*.crt
+*.der
+*.key
+*.keystore
+*.jks
+*.mobileprovision
+*.xcconfig          # ← APIキーや証明書を含む場合は除外
+
+# Firebase 設定
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+
+# ===========================================
+# FVM（Flutter Version Manager）
+# ===========================================
+.fvm/
+.flutter-version
+.fvmrc
+
+# ===========================================
+# テスト・カバレッジ
+# ===========================================
+coverage/
+test_outputs/
+.dart_tool/test/
+.dart_tool/flutter_build/
+
+# ===========================================
+# その他 Flutter 特有
+# ===========================================
+lib/l10n/generated/    # flutter gen-l10n で自動生成される場合

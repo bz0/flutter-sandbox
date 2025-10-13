@@ -1,0 +1,9 @@
+{
+  "appTitle": "Flutter Demo",
+  "homePageTitle": "Flutter Demo Home Page",
+  "counterMessage": "You have pushed the button this many times:",
+  "incrementTooltip": "Increment",
+  "@incrementTooltip": {
+    "description": "Tooltip for the increment button"
+  }
+}
