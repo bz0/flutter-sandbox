@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>このアプリは画像を選択・編集するためにフォトライブラリへのアクセスが必要です。</string>
+	<key>NSCameraUsageDescription</key>
+	<string>このアプリは写真を撮影するためにカメラへのアクセスが必要です。</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>このアプリは編集した画像を保存するためにフォトライブラリへのアクセスが必要です。</string>
 </dict>
 </plist>
