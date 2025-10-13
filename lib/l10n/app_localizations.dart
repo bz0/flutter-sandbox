@@ -116,6 +116,24 @@ abstract class AppLocalizations {
   /// **'Start'**
   String get start;
 
+  /// No description provided for @imageSelectScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Image'**
+  String get imageSelectScreenTitle;
+
+  /// No description provided for @imageSelect.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Image'**
+  String get imageSelect;
+
+  /// No description provided for @imageEdit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Image'**
+  String get imageEdit;
+
   /// No description provided for @homePageTitle.
   ///
   /// In en, this message translates to:

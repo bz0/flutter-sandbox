@@ -18,6 +18,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get start => 'Start';
 
   @override
+  String get imageSelectScreenTitle => 'Select Image';
+
+  @override
+  String get imageSelect => 'Select Image';
+
+  @override
+  String get imageEdit => 'Edit Image';
+
+  @override
   String get homePageTitle => 'Flutter Demo Home Page';
 
   @override
