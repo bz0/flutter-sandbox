@@ -104,6 +104,18 @@ abstract class AppLocalizations {
   /// **'Flutter Demo'**
   String get appTitle;
 
+  /// No description provided for @startScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Snap'**
+  String get startScreenTitle;
+
+  /// No description provided for @start.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get start;
+
   /// No description provided for @homePageTitle.
   ///
   /// In en, this message translates to:

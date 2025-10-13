@@ -12,11 +12,17 @@ class AppLocalizationsJa extends AppLocalizations {
   String get appTitle => 'Flutterデモ';
 
   @override
-  String get homePageTitle => 'Flutterデモホームページ';
+  String get startScreenTitle => 'Edit Snap日本語版';
 
   @override
-  String get counterMessage => 'ボタンを押した回数:';
+  String get start => '開始する';
 
   @override
-  String get incrementTooltip => '増加';
+  String get homePageTitle => 'Flutter Demo Home Page';
+
+  @override
+  String get counterMessage => 'You have pushed the button this many times:';
+
+  @override
+  String get incrementTooltip => 'Increment';
 }

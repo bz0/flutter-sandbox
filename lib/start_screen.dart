@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 
 class StartScreen extends StatelessWidget {
@@ -6,10 +7,11 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Edit Snap'),
+        title: Text(l10n?.startScreenTitle ?? 'Edit Snap'),
       ),
       body: Center(
         child: Column(
@@ -20,7 +22,7 @@ class StartScreen extends StatelessWidget {
                     textAlign: TextAlign.center, 
                 ),
                 ElevatedButton(
-                    child: const Text('開始する'),
+                    child: Text(l10n?.start ?? '開始する'),
                     onPressed: () {},
                 ),
             ],

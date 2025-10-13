@@ -1,5 +1,7 @@
 {
   "appTitle": "Flutter Demo",
+  "startScreenTitle": "Edit Snap",
+  "start": "Start",
   "homePageTitle": "Flutter Demo Home Page",
   "counterMessage": "You have pushed the button this many times:",
   "incrementTooltip": "Increment",

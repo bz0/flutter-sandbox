@@ -1,6 +1,14 @@
 {
   "appTitle": "Flutterデモ",
-  "homePageTitle": "Flutterデモホームページ",
-  "counterMessage": "ボタンを押した回数:",
-  "incrementTooltip": "増加"
+  "startScreenTitle": "Edit Snap日本語版",
+  "helloworldOn": "こんにちは！\n今日は{date}です",
+  "@helloworldOn": {
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "MEd"
+      }
+    }
+  },
+  "start": "開始する"
 }

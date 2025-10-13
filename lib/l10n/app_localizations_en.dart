@@ -12,6 +12,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'Flutter Demo';
 
   @override
+  String get startScreenTitle => 'Edit Snap';
+
+  @override
+  String get start => 'Start';
+
+  @override
   String get homePageTitle => 'Flutter Demo Home Page';
 
   @override
