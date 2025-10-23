@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'l10n/app_localizations.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:image/image.dart' as image_lib;
-import 'package:flutter/foundation.dart';
+import 'package:image/image.dart' as image_lib; // Imageウィジェットと名前がかぶるので別名にする
+import 'package:flutter/foundation.dart'; // 画像データとしてUnit8List型を使用するためにimport
 
 class ImageSelectScreen extends StatefulWidget {
   const ImageSelectScreen({super.key});
@@ -12,12 +12,13 @@ class ImageSelectScreen extends StatefulWidget {
 }
 
 class _ImageSelectScreenState extends State<ImageSelectScreen> {
-  final ImagePicker _picker = ImagePicker();
+  final ImagePicker _picker = ImagePicker(); // 画像ライブラリやカメラへアクセスする機能を提供
   Uint8List? _imageBitmap;
 
+  // 画像選択処理を行うメソッド
   Future<void> _selectImage() async {
-    final XFile? imageFile = await _picker.pickImage(source: ImageSource.gallery);
-    final imageBitmap = await imageFile?.readAsBytes();
+    final XFile? imageFile = await _picker.pickImage(source: ImageSource.gallery); // 画像ライブラリやカメラへアクセスする機能
+    final imageBitmap = await imageFile?.readAsBytes(); // 画像データをバイト配列として読み込む
     assert(imageBitmap != null);
     if (imageBitmap == null) return;
 
@@ -48,15 +49,18 @@ class _ImageSelectScreenState extends State<ImageSelectScreen> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            if (imageBitmap != null) Image.memory(imageBitmap),
             ElevatedButton(
               child: Text(l10n?.imageSelect ?? '画像を選択'),
               onPressed: () => _selectImage(),
             ),
-            ElevatedButton(
-              child: Text(l10n?.imageEdit ?? '画像を編集'),
-              onPressed: () {},
-            ),
+            if (imageBitmap != null) 
+              ElevatedButton(
+                child: Text(l10n?.imageEdit ?? '画像を編集'),
+                onPressed: () {},
+              ),
           ],
         ),
       ),
