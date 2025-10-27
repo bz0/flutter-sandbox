@@ -10,5 +10,6 @@
   "incrementTooltip": "Increment",
   "@incrementTooltip": {
     "description": "Tooltip for the increment button"
-  }
+  },
+  "imageEditScreenTitle": "image edit"
 }

@@ -151,6 +151,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Increment'**
   String get incrementTooltip;
+
+  /// No description provided for @imageEditScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'image edit'**
+  String get imageEditScreenTitle;
 }
 
 class _AppLocalizationsDelegate

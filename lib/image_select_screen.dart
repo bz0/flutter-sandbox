@@ -3,6 +3,7 @@ import 'l10n/app_localizations.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image/image.dart' as image_lib; // Imageウィジェットと名前がかぶるので別名にする
 import 'package:flutter/foundation.dart'; // 画像データとしてUnit8List型を使用するためにimport
+import 'edit_snap_screen.dart';
 
 class ImageSelectScreen extends StatefulWidget {
   const ImageSelectScreen({super.key});
@@ -59,7 +60,13 @@ class _ImageSelectScreenState extends State<ImageSelectScreen> {
             if (imageBitmap != null) 
               ElevatedButton(
                 child: Text(l10n?.imageEdit ?? '画像を編集'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ImageEditScreen(imageBitmap: imageBitmap),
+                    ),
+                  );
+                },
               ),
           ],
         ),

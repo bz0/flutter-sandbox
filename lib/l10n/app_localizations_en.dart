@@ -34,4 +34,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get incrementTooltip => 'Increment';
+
+  @override
+  String get imageEditScreenTitle => 'image edit';
 }

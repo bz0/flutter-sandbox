@@ -51,5 +51,9 @@
 	<string>このアプリは写真を撮影するためにカメラへのアクセスが必要です。</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>このアプリは編集した画像を保存するためにフォトライブラリへのアクセスが必要です。</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>ja</string>
+	</array>
 </dict>
 </plist>
