@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart'; // 画像データとしてUnit8List型を使用するためにimport
 import 'gen/assets.gen.dart';
+import 'package:image/image.dart' as image_lib;
 
 class ImageEditScreen extends StatefulWidget {
   const ImageEditScreen({super.key, required this.imageBitmap});
@@ -12,6 +13,36 @@ class ImageEditScreen extends StatefulWidget {
 }
 
 class _ImageEditScreenState extends State<ImageEditScreen> {
+  late Uint8List _imageBitmap;
+
+  @override
+  void initState() {
+    super.initState();
+    _imageBitmap = widget.imageBitmap;
+  }
+
+  void _rotateImage() {
+    final image = image_lib.decodeImage(_imageBitmap);
+    if (image == null) return;
+    final rotatedImage = image_lib.copyRotate(image, angle: 90);
+    setState(() {
+      _imageBitmap = image_lib.encodePng(rotatedImage);
+    });
+  }
+
+  void _flipImage() {
+    final image = image_lib.decodeImage(_imageBitmap); // 画像データをデコードする
+    if (image == null) return;
+    final flippedImage = image_lib.copyFlip(
+      image,
+      direction: image_lib.FlipDirection.horizontal
+    );
+    // 画像を水平方向に反転する
+    setState(() {
+      _imageBitmap = image_lib.encodePng(flippedImage); // 画像をエンコードして状態を更新する
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
@@ -24,14 +55,14 @@ class _ImageEditScreenState extends State<ImageEditScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.memory(widget.imageBitmap),
+            Image.memory(_imageBitmap),
             IconButton(
               icon: Assets.rotateIcon.svg(width: 24, height: 24), // フレームワーク組み込みのアイコン
-              onPressed: () {},
+              onPressed: ()  => _rotateImage(),
             ),
             IconButton(
               icon: Assets.flipIcon.svg(width: 24, height: 24),
-              onPressed: () {},
+              onPressed: () => _flipImage(),
             ),
           ],
         ),
